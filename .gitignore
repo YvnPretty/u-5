@@ -1,0 +1,4 @@
+/app/config/conexion.php
+/vendor
+.env
+.DS_Store

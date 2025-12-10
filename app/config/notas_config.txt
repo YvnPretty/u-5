@@ -1,0 +1,2 @@
+esta carpeta solo contendra archivos de configuracion que no seran modificados
+como conexion a la base de datos.

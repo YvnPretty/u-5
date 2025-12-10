@@ -1,0 +1,1 @@
+esta carpeta contine todos los archivos publicos, los cuales no causaran algun problema si son visibles a los usuarios

@@ -23,19 +23,19 @@
             $usuario = $consulta->fetch(PDO::FETCH_ASSOC);
 
             if($usuario){
-                if($_POST['password'] == $usuario['password']){
+                if(password_verify($_POST['password'], $usuario['password'])){
                     $_SESSION['usuario_sesion'] = $usuario;
                     header("location: ../../index.php");
                 }else{
-                    echo "Credenciales de acceso erróneas!";
+                    header("location: ../../login.php?error=Credenciales+incorrectas");
                 }
             }else{
-                echo "Credenciales de acceso erróneas!";
+                header("location: ../../login.php?error=Usuario+no+encontrado");
             }
         }else{
-            echo "Debes llenar todos los campos!";
+            header("location: ../../login.php?error=Por+favor+llena+todos+los+campos");
         }
     }else{
-        echo "No tienes acceso a esta ruta";
+        header("location: ../../login.php?error=Acceso+no+autorizado");
     }
 ?>
